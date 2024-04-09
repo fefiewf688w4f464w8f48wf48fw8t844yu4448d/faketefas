@@ -1,0 +1,575 @@
+--slap battles
+getgenv().IsOrixonVerified = true
+
+local Glove_Remotes = {
+    ["Default"] = game.ReplicatedStorage.b,
+    ["Extended"] = game.ReplicatedStorage.b,
+     
+    ["T H I C K"] = game.ReplicatedStorage.GeneralHit,
+    ["Squid"] = game.ReplicatedStorage.GeneralHit,
+    ["Gummy"] = game.ReplicatedStorage.GeneralHit,
+    ["RNG"] = game.ReplicatedStorage.GeneralHit,
+    ["Tycoon"] = game.ReplicatedStorage.GeneralHit,
+    ["Charge"] = game.ReplicatedStorage.GeneralHit,
+    ["Baller"] = game.ReplicatedStorage.GeneralHit,
+    ["Tableflip"] = game.ReplicatedStorage.GeneralHit,
+    ["Booster"] = game.ReplicatedStorage.GeneralHit,
+    ["Shield"] = game.ReplicatedStorage.GeneralHit,
+    ["Track"] = game.ReplicatedStorage.GeneralHit,
+    ["Goofy"] = game.ReplicatedStorage.GeneralHit,
+    ["Confusion"] = game.ReplicatedStorage.GeneralHit,
+    ["Elude"] = game.ReplicatedStorage.GeneralHit,
+    ["Glitch"] = game.ReplicatedStorage.GeneralHit,
+    ["Snowball"] = game.ReplicatedStorage.GeneralHit,
+    ["🗿"] = game.ReplicatedStorage.GeneralHit,
+    ["Obby"] = game.ReplicatedStorage.GeneralHit,
+    ["Voodoo"] = game.ReplicatedStorage.GeneralHit,
+    ["Leash"] = game.ReplicatedStorage.GeneralHit,
+    ["Flamarang"] = game.ReplicatedStorage.GeneralHit,
+    ["Kinetic"] = game.ReplicatedStorage.GeneralHit,
+    ["Berserk"] = game.ReplicatedStorage.GeneralHit,
+    ["Rattlebones"] = game.ReplicatedStorage.GeneralHit,
+    ["Chain"] = game.ReplicatedStorage.GeneralHit,
+    ["Ping Pong"] = game.ReplicatedStorage.GeneralHit,
+    
+    ["Diamond"] = game.ReplicatedStorage.DiamondHit,
+    ["ZZZZZZZ"] = game.ReplicatedStorage.ZZZZZZZHit,
+    ["Brick"] = game.ReplicatedStorage.BrickHit,
+    ["Snow"] = game.ReplicatedStorage.SnowHit,
+    ["Pull"] = game.ReplicatedStorage.PullHit,
+    ["Flash"] = game.ReplicatedStorage.FlashHit,
+    ["Spring"] = game.ReplicatedStorage.springhit,
+    ["Swapper"] = game.ReplicatedStorage.HitSwapper,
+    ["Bull"] = game.ReplicatedStorage.BullHit,
+    ["Dice"] = game.ReplicatedStorage.DiceHit,
+    ["Ghost"] = game.ReplicatedStorage.GhostHit,
+    ["Thanos"] = game.ReplicatedStorage.ThanosHit,
+    ["Stun"] = game.ReplicatedStorage.HtStun,
+    ["Za Hando"] = game.ReplicatedStorage.zhramt,
+    ["Fort"] = game.ReplicatedStorage.Fort,
+    ["Magnet"] = game.ReplicatedStorage.MagnetHIT,
+    ["Pusher"] = game.ReplicatedStorage.PusherHit,
+    ["Anchor"] = game.ReplicatedStorage.hitAnchor,
+    ["Space"] = game.ReplicatedStorage.HtSpace,
+    ["Boomerang"] = game.ReplicatedStorage.BoomerangH,
+    ["Mail"] = game.ReplicatedStorage.MailHit,
+    ["Golden"] = game.ReplicatedStorage.GoldenHit,
+    ["Cheeky"] = game.ReplicatedStorage.CheekyHit,
+    ["Reaper"] = game.ReplicatedStorage.ReaperHit,
+    ["Defense"] = game.ReplicatedStorage.DefenseHit,
+    ["Killstreak"] = game.ReplicatedStorage.KSHit,
+    ["Reverse"] = game.ReplicatedStorage.ReverseHit,
+    ["Shukuchi"] = game.ReplicatedStorage.ShukuchiHit,
+    ["Duelist"] = game.ReplicatedStorage.DuelistHit,
+    ["Woah"] = game.ReplicatedStorage.woahHit,
+    ["Ice"] = game.ReplicatedStorage.IceHit,
+    ["Adios"] = game.ReplicatedStorage.hitAdios,
+    ["Blocked"] = game.ReplicatedStorage.BlockedHit,
+    ["Engineer"] = game.ReplicatedStorage.engiehit,
+    ["Rocky"] = game.ReplicatedStorage.RockyHit,
+    ["Conveyor"] = game.ReplicatedStorage.ConvHit,
+    ["STOP"] = game.ReplicatedStorage.STOP,
+    ["Phantom"] = game.ReplicatedStorage.PhantomHit,
+    ["Wormhole"] = game.ReplicatedStorage.WormHit,
+    ["Acrobat"] = game.ReplicatedStorage.AcHit,
+    ["Plague"] = game.ReplicatedStorage.PlagueHit,
+    ["Megarock"] = game.ReplicatedStorage.DiamondHit,
+    ["[REDACTED]"] = game.ReplicatedStorage.ReHit,
+    ["bus"] = game.ReplicatedStorage.hitbus,
+    ["Phase"] = game.ReplicatedStorage.PhaseH,
+    ["Warp"] = game.ReplicatedStorage.WarpHt,
+    ["Bomb"] = game.ReplicatedStorage.BombHit,
+    ["Bubble"] = game.ReplicatedStorage.BubbleHit,
+    ["Jet"] = game.ReplicatedStorage.JetHit,
+    ["Shard"] = game.ReplicatedStorage.ShardHIT,
+    ["potato"] = game.ReplicatedStorage.potatohit,
+    ["Cult"] = game.ReplicatedStorage.CULTHit,
+    ["bob"] = game.ReplicatedStorage.bobhit,
+    ["Buddies"] = game.ReplicatedStorage.buddiesHIT,
+    ["Moon"] = game.ReplicatedStorage.CelestialHit,
+    ["Jupiter"] = game.ReplicatedStorage.CelestialHit,
+    ["Spy"] = game.ReplicatedStorage.SpyHit,
+    ["Detonator"] = game.ReplicatedStorage.DetonatorHit,
+    ["Rage"] = game.ReplicatedStorage.GRRRR,
+    ["Trap"] = game.ReplicatedStorage.traphi,
+    ["Orbit"] = game.ReplicatedStorage.Orbihit,
+    ["Hybrid"] = game.ReplicatedStorage.HybridCLAP,
+    ["Slapple"] = game.ReplicatedStorage.SlappleHit,
+    ["Disarm"] = game.ReplicatedStorage.DisarmH,
+    ["Dominance"] = game.ReplicatedStorage.DominanceHit,
+    ["Link"] = game.ReplicatedStorage.LinkHit,
+    ["Custom"] = game.ReplicatedStorage.CustomHit,
+    
+    ["Mitten"] = game.ReplicatedStorage.MittenHit,
+    ["Hallow Jack"] = game.ReplicatedStorage.HallowHIT,
+    
+    ["OVERKILL"] = game.ReplicatedStorage.Overkillhit,
+    ["The Flex"] = game.ReplicatedStorage.FlexHit,
+    ["God's Hand"] = game.ReplicatedStorage.Godshand,
+    ["Error"] = game.ReplicatedStorage.Errorhit
+}
+setmetatable(Glove_Remotes, {
+    __index = function(t, i)
+        return game.ReplicatedStorage.GeneralHit
+    end
+})
+
+getgenv().KillAura = false
+getgenv().SilentAim = false
+getgenv().Fly = false
+getgenv().FlySpeed = 0.25
+getgenv().Speed = false
+getgenv().SpeedSpeed = 0.25
+getgenv().NoRagdoll = false
+getgenv().AutoSlapples = false
+getgenv().AutoTycoonGlove = false
+getgenv().Name = false
+getgenv().Line = false
+getgenv().TpSpeed = false
+getgenv().TpSpeedSpeed = 1
+getgenv().GodMode = false
+getgenv().GoldenMethod = false
+getgenv().UnoReverseMethod = false
+getgenv().EludeMethod = false
+getgenv().AntiTimeStop = false
+getgenv().HideUnoReverseEffect = false
+getgenv().Reach = 15
+getgenv().AntiMail = false
+getgenv().Rotations = false
+getgenv().AntiBob = false
+
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/fefiewf688w4f464w8f48wf48fw8t844yu4448d/Orixon/main/UI%20Library"))()
+local UI = lib:Create("Orixon")
+
+local MainTab = UI:addTab("Main")
+local CombatTab = UI:addTab("Combat")
+local FarmingTab = UI:addTab("Farming")
+local AntiStuff = UI:addTab("Anti Stuff")
+local GetGlovesTab = UI:addTab("Get Gloves")
+local VisualsTab = UI:addTab("Visuals")
+
+MainTab:addLabel("Movement")
+MainTab:addToggle("Fly", false, function()
+    if getgenv().Fly == false then
+        getgenv().Fly = true
+        local BG = Instance.new('BodyGyro')
+		local BV = Instance.new('BodyVelocity')
+		BG.P = 9e4
+		BG.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+		BV.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+		BG.maxTorque = Vector3.new(math.huge, math.huge, math.huge)
+		BG.cframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+		BV.velocity = Vector3.new(0, 0, 0)
+		BV.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+		game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
+    else
+        getgenv().Fly = false
+        game.Players.LocalPlayer.Character.HumanoidRootPart.BodyGyro:Destroy()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity:Destroy()
+        game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+    end
+end)
+MainTab:addSlider("Fly Speed", 10, 0.25, function(v)
+    getgenv().FlySpeed = v
+end)
+MainTab:addToggle("Speed", false, function()
+    if getgenv().TpSpeed == true then
+        getgenv().TpSpeed = false
+    else
+        getgenv().TpSpeed = true
+    end
+    if getgenv().TpSpeed == true then
+        Speed()
+    end
+end)
+MainTab:addSlider("Speed Value", 10, 1, function(v)
+    getgenv().TpSpeedSpeed = v
+end)
+MainTab:addToggle("No Ragdoll", false, function()
+    if getgenv().NoRagdoll == true then
+        getgenv().NoRagdoll = false
+    else
+        getgenv().NoRagdoll = true
+    end
+    if getgenv().NoRagdoll == true then
+        NoRagdoll()
+    end
+end)
+MainTab:addLabel("Misc")
+MainTab:addToggle("God Mode", false, function()
+    if getgenv().GodMode == true then
+        getgenv().GodMode = false
+    else
+        getgenv().GodMode = true
+    end
+end)
+local GodmodeDropdown = MainTab:addDropdown("God Mode Method: ")
+GodmodeDropdown:addButton("Golden Glove", function()
+    getgenv().GoldenMethod = true
+    getgenv().UnoReverseMethod = false
+    GodmodeDropdown:renameDropdown("God Mode Method: Golden")
+    if getgenv().GoldenMethod == true and getgenv().GodMode == true then
+        GoldenGodMode()
+    end
+end)
+GodmodeDropdown:addButton("Uno Reverse Glove", function()
+    getgenv().GoldenMethod = false
+    getgenv().UnoReverseMethod = true
+    GodmodeDropdown:renameDropdown("God Mode Method: Uno Reverse")
+    if getgenv().UnoReverseMethod == true and getgenv().GodMode == true then
+        UnoReverseMethod()
+    end
+end)
+MainTab:addToggle("Hide Uno Effect", false, function()
+    if getgenv().HideUnoReverseEffect == true then
+        getgenv().HideUnoReverseEffect = false
+    else
+        getgenv().HideUnoReverseEffect = true
+    end
+    if getgenv().HideUnoReverseEffect == true then
+        HideUnoReverseEffect()
+    end
+end)
+CombatTab:addLabel("Combat Stuff")
+CombatTab:addToggle("Kill Aura", false, function()
+    if getgenv().KillAura == true then
+        getgenv().KillAura = false
+    else
+        getgenv().KillAura = true
+    end
+    if getgenv().KillAura == true then
+        KillAura()
+    end
+end)
+CombatTab:addToggle("Silent Aim", false, function()
+    if getgenv().SilentAim == true then
+        getgenv().SilentAim = false
+    else
+        getgenv().SilentAim = true
+    end
+    if getgenv().SilentAim == true then
+        SilentAim()
+    end
+end)
+CombatTab:addSlider("Kill Aura/Silent Aim Reach:", 25, 15, function(v)
+    getgenv().Reach = v
+end)
+CombatTab:addToggle("Rotations", false, function()
+    if getgenv().Rotations == true then
+        getgenv().Rotations = false
+        game.Players.LocalPlayer.Character.Humanoid.AutoRotate = true
+    else
+        getgenv().Rotations = true
+        Rotations()
+    end
+end)
+FarmingTab:addLabel("Auto Farm")
+FarmingTab:addToggle("Auto Slapples", false, function()
+    if getgenv().AutoSlapples == true then
+        getgenv().AutoSlapples = false
+    else
+        getgenv().AutoSlapples = true
+    end
+    if getgenv().AutoSlapples == true then
+        AutoSlapples()
+    end
+end)
+AntiStuff:addLabel("Anti Abilities")
+AntiStuff:addToggle("Anti Bob", false, function()
+    if getgenv().AntiBob == true then
+        getgenv().AntiBob = false
+    else
+        getgenv().AntiBob = true
+        AntiBob()
+    end
+end)
+AntiStuff:addToggle("Anti Za Hando", false, function()
+
+end)
+AntiStuff:addToggle("Anti Mail", false, function()
+    if getgenv().AntiMail == true then
+        getgenv().AntiMail = false
+    else
+        getgenv().AntiMail = true
+        AntiMail()
+    end
+end)
+AntiStuff:addToggle("Anti Hallow-Jack", false, function()
+    
+end)
+AntiStuff:addToggle("Anti Stun", false, function()
+    
+end)
+AntiStuff:addToggle("Anti Cube Of Death", false, function()
+    
+end)
+AntiStuff:addToggle("Death Barriers", false, function()
+    
+end)
+AntiStuff:addToggle("Anti Time Stop", false, function()
+    if getgenv().AntiTimeStop == true then
+        getgenv().AntiTimeStop = false
+    else
+        getgenv().AntiTimeStop = true
+    end
+    if getgenv().AntiTimeStop == true then
+        AntiTimeStop()
+    end
+end)
+
+GetGlovesTab:addLabel("Get Gloves")
+GetGlovesTab:addButton("Get Elude", function()
+    
+end)
+GetGlovesTab:addToggle("Auto get Tycoon Glove", false, function()
+    if getgenv().AutoTycoonGlove == true then
+        getgenv().AutoTycoonGlove = false
+    else
+        getgenv().AutoTycoonGlove = true
+    end
+    if getgenv().AutoTycoonGlove == true then
+        AutoTycoonGlove()
+    end
+end)
+
+--Disable Cube Of Death
+
+function KillAura()
+    spawn(function()
+        while getgenv().KillAura == true do
+            wait()
+            for i, v in pairs(workspace:GetChildren()) do
+                if game.Players.LocalPlayer.Character then
+                    if game.Players.LocalPlayer.Character:FindFirstChild("Torso") then
+                        if v.ClassName == "Model" then
+                            if v:FindFirstChild("Torso") and v.Name ~= game.Players.LocalPlayer.Name then
+                                if (v.Torso.Position - game.Players.LocalPlayer.Character.Torso.Position).magnitude < getgenv().Reach then
+                                    Glove_Remotes[game.Players.LocalPlayer.leaderstats.Glove.Value]:FireServer(v:FindFirstChild("Torso"))
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end)
+end
+spawn(function()
+    local mt = getrawmetatable(game)
+    local oldMeta = mt.__namecall
+    setreadonly(mt, false)
+    game:GetService("UserInputService").InputBegan:Connect(function(a, b)
+        if not b then
+            if a.UserInputType == Enum.UserInputType.MouseButton1 and getgenv().SilentAim == true then
+                Glove_Remotes[game.Players.LocalPlayer.leaderstats.Glove.Value]:FireServer(game.Players.LocalPlayer.Character.Head)
+            end
+        end
+    end)
+    mt.__namecall = function(self, ...)
+        local args = {...}
+        local method = getnamecallmethod()
+        if method == "FireServer" and self == Glove_Remotes[game.Players.LocalPlayer.leaderstats.Glove.Value] and getgenv().SilentAim == true then
+            local target = nil
+            for i, v in pairs(workspace:GetChildren()) do
+                if game.Players.LocalPlayer.Character then
+                    if v.ClassName == "Model" and v:FindFirstChild("Head") and v:FindFirstChild("HumanoidRootPart") and v.Name ~= game.Players.LocalPlayer.Name and (v.Head.Position - game.Players.LocalPlayer.Character.Head.Position).magnitude < 15 then
+                        target = v
+                    end
+                end
+            end
+            if target ~= nil then
+                args[1] = target:FindFirstChild("Torso")
+            end
+            return self.FireServer(self, unpack(args))
+        end
+        return oldMeta(self, ...)
+    end
+end)
+
+local function Fly()
+    spawn(function()
+        local UIS = game:GetService("UserInputService")
+
+        game:GetService("RunService").RenderStepped:Connect(function()
+            if getgenv().Fly == true then
+                if game.Players.LocalPlayer.Character then
+                    game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
+                    local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(game.Workspace.CurrentCamera.CFrame.LookVector.X, game.Workspace.CurrentCamera.CFrame.LookVector.Y, game.Workspace.CurrentCamera.CFrame.LookVector.Z)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, pos)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyGyro.CFrame = workspace.CurrentCamera.CoordinateFrame
+                end
+            end
+            if UIS:IsKeyDown(Enum.KeyCode.W) and getgenv().Fly == true then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -getgenv().FlySpeed) end
+            if UIS:IsKeyDown(Enum.KeyCode.S) and getgenv().Fly == true then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, getgenv().FlySpeed) end
+            if UIS:IsKeyDown(Enum.KeyCode.D) and getgenv().Fly == true then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(getgenv().FlySpeed, 0, 0) end
+            if UIS:IsKeyDown(Enum.KeyCode.A) and getgenv().Fly == true then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(-getgenv().FlySpeed, 0, 0) end
+            if UIS:IsKeyDown(Enum.KeyCode.E) and getgenv().Fly == true then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, getgenv().FlySpeed, 0) end
+            if UIS:IsKeyDown(Enum.KeyCode.Q) and getgenv().Fly == true then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -getgenv().FlySpeed, 0) end
+        end)
+    end)
+end
+Fly()
+function NoRagdoll()
+    spawn(function()
+        while getgenv().NoRagdoll == true do
+            wait()
+            if game.Players.LocalPlayer.Character then
+                if game.Players.LocalPlayer.Character:FindFirstChild("Ragdolled") then
+                    if game.Players.LocalPlayer.Character:FindFirstChild("Ragdolled").Value == true then
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+                    else
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+                    end
+                end
+            end
+        end
+    end)
+end
+function AutoSlapples()
+    spawn(function()
+        while getgenv().AutoSlapples == true do
+            wait(0.2)
+            for i, v in next, workspace.Arena.island5.Slapples:GetDescendants() do
+                if v.ClassName == "TouchTransmitter" then
+                    if game.Players.LocalPlayer.Character then
+                        if game.Players.LocalPlayer.Character:FindFirstChild("Head") then
+                            firetouchinterest(game.Players.LocalPlayer.Character.Head, v.Parent, 0)
+                            firetouchinterest(game.Players.LocalPlayer.Character.Head, v.Parent, 1)
+                        end
+                    end
+                end
+            end
+        end
+    end)
+end
+function AutoTycoonGlove()
+    spawn(function()
+        while getgenv().AutoTycoonGlove == true do
+            wait()
+            if game.Players.LocalPlayer.Character then
+                if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Arena.Plate.CFrame
+                end
+            end
+        end
+    end)
+end
+function Speed()
+    while getgenv().TpSpeed == true do
+        wait()
+        if game.Players.LocalPlayer.Character then
+            if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+                if game.Players.LocalPlayer.Character.Humanoid.MoveDirection ~= Vector3.new(0, 0, 0) then
+                    game.Players.LocalPlayer.Character:TranslateBy(Vector3.new(game.Players.LocalPlayer.Character.Humanoid.MoveDirection.X * getgenv().TpSpeedSpeed, game.Players.LocalPlayer.Character.Humanoid.MoveDirection.Y * getgenv().TpSpeedSpeed, game.Players.LocalPlayer.Character.Humanoid.MoveDirection.Z * getgenv().TpSpeedSpeed))
+                end
+            end
+        end
+    end
+end
+function GoldenGodMode()
+    spawn(function()
+        while getgenv().GodMode == true and getgenv().GoldenMethod == true do
+            wait()
+            if game:GetService("Players").LocalPlayer.Character:FindFirstChild("entered") ~= nil then
+                if game.Players.LocalPlayer.Character then
+                    if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Color ~= Color3.fromRGB(255, 255, 0) then
+                            game:GetService("ReplicatedStorage"):FindFirstChild("Goldify"):FireServer(true);
+                        end
+                    end
+                end
+            end
+        end
+    end)
+end
+function UnoReverseMethod()
+    spawn(function()
+        while getgenv().GodMode == true and getgenv().UnoReverseMethod == true do
+            wait(5.5)
+            if game:GetService("Players").LocalPlayer.Character:FindFirstChild("entered") ~= nil then
+                if game.Players.LocalPlayer.Character then
+                    if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Color ~= Color3.fromRGB(255, 255, 0) then
+                            game:GetService("ReplicatedStorage"):FindFirstChild("ReverseAbility"):FireServer()
+                        end
+                    end
+                end
+            end
+        end
+    end)
+end
+function AntiTimeStop()
+    spawn(function()
+        while getgenv().AntiTimeStop == true do
+            wait()
+            if game.Players.LocalPlayer.Character then
+                if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                    if game.Players.LocalPlayer.Character:FindFirstChild("Ragdolled").Value == false then
+                        game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Anchored = false
+                        if game.Players.LocalPlayer.Character:FindFirstChild("Head") then
+                            game.Players.LocalPlayer.Character:FindFirstChild("Head").Anchored = false
+                        end
+                    end
+                end
+            end
+        end
+    end)
+end
+function HideUnoReverseEffect()
+    spawn(function()
+        while getgenv().HideUnoReverseEffect == true do
+            wait()
+            if game.Players.LocalPlayer.Character then
+                if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                    for i, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                        if v.ClassName == "SelectionBox" or v.Name == "UnoReverseCard" then
+                            v:Destroy()
+                        end
+                    end
+                end
+            end
+        end
+    end)
+end
+function AntiMail()
+    spawn(function()
+        while getgenv().AntiMail == true do
+            wait()
+            if game.Players.LocalPlayer.PlayerGui:FindFirstChild("MailPopup") then
+                game.Players.LocalPlayer.PlayerGui:FindFirstChild("MailPopup"):Destroy()
+            end
+        end
+    end)
+end
+function Rotations()
+    spawn(function()
+        while getgenv().Rotations == true do
+            wait()
+            if game.Players.LocalPlayer.Character then
+                if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                    for i, v in pairs(workspace:GetChildren()) do
+                        if v.ClassName == "Model" and v:FindFirstChild("HumanoidRootPart") and v.Name ~= game.Players.LocalPlayer.Name and (v:FindFirstChild("HumanoidRootPart").Position - game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < getgenv().Reach then
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.lookAt(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, Vector3.new(v.HumanoidRootPart.Position.X, game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z))
+                            game.Players.LocalPlayer.Character.Humanoid.AutoRotate = false
+                        else
+                            game.Players.LocalPlayer.Character.Humanoid.AutoRotate = true
+                        end
+                    end
+                end
+            end
+        end
+    end)
+end
+
+function AntiBob()
+    spawn(function()
+        while getgenv().AntiBob == true do
+            wait()
+            for i, v in pairs(workspace:GetChildren()) do
+                if v.ClassName == "StringValue" and v.Name == "Target" and v.Parent.ClassName == "Model" and v.Value == game.Players.LocalPlayer.Name then
+                    v.HumanoidRootPart.CFrame = game:GetService("Workspace").Arena.CubeOfDeathArea["the cube of death(i heard it kills)"].CFrame
+                end
+            end
+        end
+    end)
+end
